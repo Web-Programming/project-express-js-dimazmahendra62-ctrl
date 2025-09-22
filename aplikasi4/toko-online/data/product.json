@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Gaming",
+    "price": 15000000,
+    "description": "Laptop berperforma tinggi untuk kebutuhan gaming anda"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone Pro",
+    "price": 9500000,
+    "description": "Smartphone flagship dengan kamera canggih"
+  },
+  {
+    "id": 3,
+    "name": "Headset Wireless",
+    "price": 1200000,
+    "description": "Headset nirkabel dengan kualitas suara premium"
+  },
+  {
+    "id": 4,
+    "name": "Keyboard Mechanical",
+    "price": 800000,
+    "description": "Keyboard mekanik dengan switch tactile responsif"
+  },
+  {
+    "id": 5,
+    "name": "Smartwatch Series X",
+    "price": 3500000,
+    "description": "Jam tangan pintar dengan fitur kesehatan lengkap"
+  },
+  {
+    "id": 6,
+    "name": "Drone Kamera 4K",
+    "price": 7800000,
+    "description": "Drone dengan kamera 4K untuk fotografi udara"
+  },
+  {
+    "id": 7,
+    "name": "Speaker Bluetooth",
+    "price": 600000,
+    "description": "Speaker portable dengan suara bass yang kuat"
+  },
+  {
+    "id": 8,
+    "name": "Monitor 27 Inch",
+    "price": 3200000,
+    "description": "Monitor 27 inch dengan resolusi QHD dan refresh rate tinggi"
+  },
+  {
+    "id": 9,
+    "name": "Mouse Gaming RGB",
+    "price": 450000,
+    "description": "Mouse gaming dengan sensor presisi dan lampu RGB"
+  },
+  {
+    "id": 10,
+    "name": "Powerbank 20.000mAh",
+    "price": 400000,
+    "description": "Powerbank kapasitas besar dengan fast charging"
+  },
+  {
+    "id": 11,
+    "name": "Tablet Stylus Pro",
+    "price": 7200000,
+    "description": "Tablet profesional dengan stylus untuk desainer"
+  },
+  {
+    "id": 12,
+    "name": "Kamera Mirrorless",
+    "price": 12500000,
+    "description": "Kamera mirrorless dengan sensor full-frame"
+  },
+  {
+    "id": 13,
+    "name": "Printer Inkjet",
+    "price": 2500000,
+    "description": "Printer inkjet warna dengan konektivitas Wi-Fi"
+  },
+  {
+    "id": 14,
+    "name": "Smart TV 50 Inch",
+    "price": 6700000,
+    "description": "Smart TV 4K dengan dukungan aplikasi streaming"
+  },
+  {
+    "id": 15,
+    "name": "External SSD 1TB",
+    "price": 2100000,
+    "description": "Penyimpanan eksternal super cepat dengan kapasitas 1TB"
+  },
+  {
+    "id": 16,
+    "name": "Router WiFi 6",
+    "price": 1800000,
+    "description": "Router modern dengan kecepatan Wi-Fi generasi terbaru"
+  },
+  {
+    "id": 17,
+    "name": "Console Game NextGen",
+    "price": 8500000,
+    "description": "Konsol game generasi terbaru dengan grafis realistis"
+  },
+  {
+    "id": 18,
+    "name": "Kamera Action 5K",
+    "price": 5600000,
+    "description": "Kamera action waterproof dengan kualitas 5K"
+  },
+  {
+    "id": 19,
+    "name": "Earbuds TWS",
+    "price": 900000,
+    "description": "Earbuds nirkabel dengan noise cancelling"
+  },
+  {
+    "id": 20,
+    "name": "Smart Lamp RGB",
+    "price": 300000,
+    "description": "Lampu pintar dengan warna RGB yang bisa diatur via aplikasi"
+  }
+]
+
