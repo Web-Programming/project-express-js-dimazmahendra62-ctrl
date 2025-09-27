@@ -1,11 +1,38 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<!-- <% layout('layout') %>
+
+<div class="container mt-5">
+  <h1 class="text-center"><i title %></hi>
+    <div class="row">
+      <products.forEach(product => {%>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"><%= product.name %></h4>
+              <p class="card-text"><%=product.description %></p>
+              <a> href="/produk/<%= product.id %>" class="btn btn-primary mt-auto">detail</a>
+            </div>
+          </div>
+        </div>
+        <<% )); %>
+      </div>
+    </div> -->
+
+    <h1>Daftar Produk</h1>
+
+    <% if (query !== null) { %>
+      <p>
+        Menampilkan hasil pencarian untuk: "<%= query %>"
+      </p>
+    <% } %>
+
+    <ul>
+      <if (product.length > 0) { %>
+        <% products.forEach(function(product) { %>
+        <li>
+          <%= product.name %> - Rp <%= product.price.tolocaleString() %>
+        </li>
+      <% }) %>
+    <% } else { %>
+      <li>Tidak ada produk ditemukan.</li>
+    <% } %>
+  </ul>

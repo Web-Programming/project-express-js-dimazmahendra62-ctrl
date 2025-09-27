@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,5 +34,24 @@
   </html>
 </nav></nav>
     <%- body %>
-    <script src="bootstrap/css/bootstrap.min.css"
+    <script src="bootstrap/css/bootstrap.min.css" -->
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PAW 2 - Produk/</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <!-- Form Search -->
+      <form action="/search" method="get" style="display: inline;">
+        <input type="text" name="q" placeholder="Cari produk..." />
+        <button type="submit">Cari</button>
+      </form>
+    </nav>
+
+    <%- body %>
+  </body>
+</html>
