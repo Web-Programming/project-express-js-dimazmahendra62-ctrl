@@ -1,0 +1,34 @@
+<% layout('layout') %>
+
+<div class="container mt-5">
+  <h1 class="text-center"><i>Daftar Produk</i></h1>
+  <div class="row">
+    <% products.forEach(function(product) { %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title"><%= product.name %></h4>
+            <p class="card-text"><%= product.description %></p>
+            <a href="/produk/<%= product.id %>" class="btn btn-primary mt-auto">Detail</a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<h1>Daftar Produk</h1>
+
+<% if (query !== null) { %>
+  <p>Menampilkan hasil pencarian untuk: "<%= query %>"</p>
+<% } %>
+
+<ul>
+  <% if (products.length > 0) { %>
+    <% products.forEach(function(product) { %>
+      <li><%= product.name %> - Rp <%= product.price.toLocaleString() %></li>
+    <% }) %>
+  <% } else { %>
+    <li>Tidak ada produk ditemukan.</li>
+  <% } %>
+</ul>
