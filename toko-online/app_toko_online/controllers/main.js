@@ -1,34 +1,20 @@
-var product = require('../../data/product.json');
+var products = require("../../data/product.json");
 
-const index =  (req, res) => {
-    res.render('index', { 
-        title: 'Toko Online',
-        products: products
-});
+exports.index = (req, res) => {
+  // ambil query string dari URL, misalnya /?q=Laptop
+  const search = req.query.q || null;
+
+  // kalau ada pencarian, filter data produk
+  let filtered = products;
+  if (search) {
+    filtered = products.filter(p =>
+      p.name.toLowerCase().includes(search.toLowerCase())
+    );
+  }
+
+  res.render('index', {
+    title: 'Daftar Produk',
+    products: filtered,
+    query: search   // ✅ kirim variabel query ke EJS
+  });
 };
-
-module.exports = { index };
-
-// var products = require("../data/product.json");
-
-// exports.index = function(req, res) {
-//   res.render("index", {
-//     title: "Toko Online",
-//     products: products
-//   });
-// };
-
-// exports.search = function(req, res) {
-//   let q = req.query.q ? req.query.q.toLowerCase() : "";
-
-//   // Filter produk berdasarkan nama yang mengandung query
-//   let results = products.filter(p => 
-//     p.name.toLowerCase().includes(q)
-//   );
-
-//   res.render("search-result", {
-//     title: "Hasil Pencarian",
-//     products: results,
-//     keyword: q
-//   });
-// };

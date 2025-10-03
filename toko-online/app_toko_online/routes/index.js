@@ -1,30 +1,42 @@
-var express = require("express");
-var router = express.Router();
-var mainController = require("../controllers/main");
+// var express = require('express');
+// var router = express.Router();
+// var products = require("../../data/product.json");
 
-/* GET home page. */
-// router.get("/", function (req, res, next) {
-//    res.render("index", {
-//      title: "Toko online Sederhana",
-//      products: products,
-//      query: "",
-//    });
+// // GET /
+// router.get('/', function(req, res, next) {
+//   const search = req.query.q || null;
+
+//   let filtered = products;
+//   if (search) {
+//     filtered = products.filter(p =>
+//       p.name.toLowerCase().includes(search.toLowerCase())
+//     );
+//   }
+
+//   res.render('index', { 
+//     title: 'Daftar Produk',
+//     products: filtered,
+//     query: search   // ✅ selalu dikirim, biar tidak undefined
+//   });
 // });
 
-router.get("/search", function (req, res, next) {
-  const q = req.query.q? req.query.q.toLowerCase() : "";
+// module.exports = router;
 
-  let filteredProducts = products;
 
-  if (q) {
-    filteredProducts = products.filter((p) => p.name.toLowerCase().include
-)}
+var express = require('express');
+var router = express.Router();
+var products = require("../../data/product.json");
 
-  res.render("index", {
-    title: "Toko online Sederhana", 
-    products: filteredProducts,
-    query: q,
+// GET /
+router.get('/', function(req, res, next) {
+  const query = req.query.q || null;   // ✅ ambil dari query param, default null
+
+  res.render('index', { 
+    title: 'Daftar Produk',
+    products: products,
+    query: query   // ✅ selalu kirim ke EJS
   });
 });
 
 module.exports = router;
+

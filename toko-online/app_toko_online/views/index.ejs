@@ -1,6 +1,6 @@
-<% layout('layout') %>
+ <% layout('layout') %>
 
-<div class="container mt-5">
+<!-- <div class="container mt-5">
   <h1 class="text-center"><i>Daftar Produk</i></h1>
   <div class="row">
     <% products.forEach(function(product) { %>
@@ -17,13 +17,18 @@
   </div>
 </div>
 
+<h1>Daftar Produk</h1>-->
+
+<!-- <% if (query !== null) { %>
+  <p>Menampilkan hasil pencarian untuk: "<%= query %>"</p>
+<% } %>  -->
 <h1>Daftar Produk</h1>
 
-<% if (query !== null) { %>
+<% if (typeof query !== "undefined" && query !== null) { %>
   <p>Menampilkan hasil pencarian untuk: "<%= query %>"</p>
 <% } %>
 
-<ul>
+<!-- <ul>
   <% if (products.length > 0) { %>
     <% products.forEach(function(product) { %>
       <li><%= product.name %> - Rp <%= product.price.toLocaleString() %></li>
@@ -31,4 +36,25 @@
   <% } else { %>
     <li>Tidak ada produk ditemukan.</li>
   <% } %>
-</ul>
+</ul>  -->
+
+<div class="container mt-5">
+  <h1>Hasil Pencarian: "<%= query %>"</h1>
+  <div class="row">
+    <% if (products.length === 0) { %>
+      <p>Tidak ada produk ditemukan.</p>
+    <% } else { %>
+      <% products.forEach(product => { %>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"><%= product.name %></h4>
+              <p class="card-text"><%= product.description %></p>
+              <p class="card-text">Rp <%= product.price %></p>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    <% } %>
+  </div>
+</div>
