@@ -4,6 +4,7 @@ var router = express.Router();
 var products = require("../models/products");
 var productController = require("../controllers/product");
 
+
 router.get("/all", productController.index);
 // --- ROUTE LIST PRODUK ---
 router.get("/", function (req, res, next) {
@@ -64,4 +65,4 @@ router.get("/:id", productController.detail);
 //   product: product,
 // });
 
-module.exports = router;
+module.exports = router;
